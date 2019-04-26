@@ -1,721 +1,413 @@
-@font-face {
-  font-family: 'ProximaNova_bold';
-  src: url('../fonts/ProximaNova-Bold.eot');
-  src: url('../fonts/ProximaNova-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Bold.woff2') format('woff2'), url('../fonts/ProximaNova-Bold.woff') format('woff'), url('../fonts/ProximaNova-Bold.ttf') format('truetype'), url('../fonts/ProximaNova-Bold.svg#ProximaNova-Bold') format('svg');
-  font-weight: bold;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNova_reg';
-  src: url('../fonts/ProximaNova-Regular.eot');
-  src: url('../fonts/ProximaNova-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/ProximaNova-Regular.woff2') format('woff2'), url('../fonts/ProximaNova-Regular.woff') format('woff'), url('../fonts/ProximaNova-Regular.ttf') format('truetype'), url('../fonts/ProximaNova-Regular.svg#ProximaNova-Regular') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-body {
-  font-family: 'ProximaNova_reg', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
 }
 html {
-  font-size: 10px;
+  scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
-button:hover,
-input:hover,
-a:hover,
-textarea:hover {
-  outline: none;
+body {
+  font-family: Arial;
+  text-align: center;
+  overflow-x: hidden;
 }
 .button {
-  background-color: #ffb500;
-  color: #fff;
-  font-family: 'ProximaNova_bold', sans-serif;
-  padding: 1rem 3rem;
-  border-radius: 8px;
-  border: none;
-  text-transform: uppercase;
-  transition: all 0.2s;
-}
-.button:hover {
-  cursor: pointer;
-  background-color: #e6a300;
-}
-section {
-  padding: 10rem 0;
-}
-.form-input {
-  display: block;
-  margin: 2.5rem 0;
   width: 100%;
-  height: 54px;
-  font-size: 2rem;
-  text-align: center;
-  border-radius: 5px;
-  border: 1px solid #dddddd;
+  height: 50px;
+  background-color: #6a6b8e;
+  color: #fff;
+  border: none;
+  border-radius: 8%;
+  font-weight: 700;
 }
-.form label {
+.main {
+  display: block;
+  padding: 9rem 0;
+  width: 100%;
+  text-align: center;
+  background: url(/images/main-bg.png) center center no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.main-header h1 {
+  font-family: 'Heebo', sans-serif;
+  font-size: 2.8rem;
+  line-height: 6rem;
+  font-weight: 1000;
+}
+.main-header p {
+  font-family: 'PT Sans', sans-serif;
+  font-size: 2rem;
+  line-height: 3rem;
+}
+.main-content {
+  margin-top: 3rem;
+}
+.main-content .wrap {
+  display: block;
+  padding: 1rem;
+}
+.main-content .wrap-block {
+  position: relative;
+  text-align: center;
+  height: 180px;
+  padding: 2rem 1rem;
+  border: 4px solid #fff;
+  border-top: none;
+}
+.main-content .wrap-block::before {
+  top: 0;
+  position: absolute;
+  content: '';
+  border: #fff 2px solid;
+  right: 0;
+  width: 40%;
+}
+.main-content .wrap-block::after {
+  top: 0;
+  position: absolute;
+  content: '';
+  border: #fff 2px solid;
+  left: 0;
+  width: 40%;
+}
+.main-content .wrap-block h2 {
+  letter-spacing: 2.4px;
+  font-size: 3.8rem;
+  font-weight: 1000;
+}
+.main-content .wrap-block p {
+  letter-spacing: 0.9px;
+  font-size: 1.2rem;
+}
+.main-content .wrap-img {
   display: inline-block;
-  padding: 0.5rem;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
-  font-size: 1.3rem;
-  background-color: #fff;
 }
-.form-btn {
-  margin-top: 2.2rem;
-  margin-bottom: 1.5rem;
-  width: 100%;
-  height: 65px;
-  font-size: 1.6rem;
-  color: #fff;
-  font-family: 'ProximaNova_bold', sans-serif;
-  text-transform: uppercase;
-}
-.main {
-  background: #fff url(/img/main-bg.jpg) center center no-repeat;
-  background-size: cover;
-  padding: 4rem 0;
-}
-.main-content {
-  margin-top: 10rem;
-}
-.main-content h1 {
-  margin-top: 0;
-  font-family: 'ProximaNova_bold', sans-serif;
-  line-height: 1.45;
-  font-size: 4rem;
-  text-transform: uppercase;
-  margin-bottom: 4rem;
-}
-.main-subtittle {
-  font-size: 2.4rem;
-  margin-bottom: 5rem;
-}
-.main span {
-  display: inline-block;
-  padding: 1.8rem 4rem;
-  background-color: #49bf15;
-  color: #fff;
+.navbar-nav .nav-item .nav-link {
   font-size: 1.5rem;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-.main span strong {
-  font-size: 2.4rem;
-}
-.main-last-text {
-  display: block;
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-size: 2rem;
   font-weight: 700;
-  text-transform: uppercase;
+  color: #000000;
 }
-.main-form {
-  background-color: #fff;
-  text-align: center;
-  padding: 5rem 4rem;
-  margin-bottom: 3.6rem;
+.navbar-nav .nav-item .nav-link:focus {
+  color: #f6ae48;
 }
-.main-form-header {
-  font-size: 1.8rem;
+.line {
+  height: 2px;
+  background-color: #000000;
+  opacity: 0.32;
 }
-.main-form small {
-  font-size: 1.3rem;
+.span-block {
+  position: relative;
 }
-.main .small-text {
-  text-align: left;
+.span-block span {
+  float: left;
+  padding: 0 1rem;
+  border: 3px solid #fff;
+  font-size: 18px;
+  line-height: 48px;
+  letter-spacing: 0.9px;
 }
-.main .small-text small {
-  font-size: 1.3rem;
-}
-.header {
-  height: 7rem;
-}
-.header-btn {
-  height: 5rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-}
-.wrap {
-  width: 100%;
-  height: 7rem;
-  display: table;
-}
-.wrap-block {
-  display: table-cell;
-  vertical-align: middle;
-  text-align: left;
-}
-.phone-block {
-  text-align: right;
-}
-.phone-link {
-  display: inline-block;
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-weight: 700;
-  font-size: 2rem;
-  height: 7rem;
-  line-height: 7rem;
-  color: #292929;
-}
-.phone-link:hover {
-  text-decoration: none;
-}
-.features-blcok {
-  height: 8rem;
-  text-align: center;
-}
-.features-img {
-  text-align: center;
-}
-.features-img img {
-  height: 6rem;
+.span-block img {
   display: block;
-  margin: 0 auto;
-}
-.features-img h3 {
-  margin-top: 6rem;
-  margin-bottom: 3.5rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-}
-.features-img p {
-  display: inline-block;
-  height: 70%;
-  font-size: 1.6rem;
-  line-height: 2rem;
-}
-.features-img p a {
-  color: #49bf15;
-  text-decoration: #49bf15 underline;
-}
-.slick-active {
-  outline: none;
-}
-.arrow {
-  top: 50%;
-  transform: translateY(-50%);
   position: absolute;
-  cursor: pointer;
-  width: 2rem;
-  border: none;
-  height: 3rem;
-  z-index: 99;
-}
-.prev {
-  left: 0;
-  background: url(../img/left.svg) center no-repeat;
-  background-size: 100%;
-}
-.next {
+  float: right;
+  top: 50%;
   right: 0;
-  background: url(../img/right.svg) center no-repeat;
-  background-size: 100%;
+  transform: translateY(50%);
 }
-.section-header {
-  margin-bottom: 13rem;
-  font-size: 3.5rem;
-  text-align: center;
-  font-family: 'ProximaNova_bold', sans-serif;
+.about {
+  margin-top: 8rem;
 }
-.prices {
-  max-height: 102rem;
-  background-image: url(../img/bg-prices.png);
-}
-.prices-header {
-  margin-bottom: 9rem;
-}
-.prices-header .header-text {
-  text-align: center;
-  color: #fff;
-}
-.prices-header .header-text h2 {
-  margin-bottom: 4rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-size: 3.6rem;
-}
-.prices-btn {
-  width: 100%;
-  height: 6.5rem;
-  font-size: 1.7rem;
-}
-.prices-section .prices-block {
-  min-height: 66rem;
-  padding: 4rem 3rem;
-  text-align: center;
-  background-color: #fff;
-  box-shadow: 0 14px 21px rgba(0, 0, 0, 0.17);
-  color: #1a1820;
-}
-.prices-section .prices-block-header {
+.about-header .header-text h2 {
   display: block;
-  min-height: 4rem;
-  font-family: 'ProximaNova_bold', sans-serif;
+  margin: 2rem auto;
+  line-height: 3rem;
+  font-size: 3rem;
 }
-.prices-section .prices-block-header strong {
-  font-size: 2.5rem;
+.about-features {
+  margin-top: 15rem;
 }
-.prices-section .prices-block-img {
-  display: block;
-  width: 100%;
-  margin-bottom: 3rem;
+.about-features-block {
+  min-height: 35rem;
+  padding: 1.5rem;
 }
-.prices-section .prices-block-description {
-  min-height: 16rem;
+.about-features-block h3 {
   margin: 1.5rem auto;
 }
-.prices-section .prices-block-description li {
-  list-style: none;
-  text-align: center;
-  font-size: 1.8rem;
-  line-height: 3.2rem;
-}
-.prices-section .prices-block-description li:before {
-  margin-right: 1.2rem;
-  list-style: none;
-  content: '';
-  display: inline-block;
-  width: 1.2rem;
-  height: 1.2rem;
-  background: url(../img/checked.png) no-repeat center;
-  background-size: 100%;
-  vertical-align: middle;
-}
-.prices-section .prices-block .sell-btn {
-  font-size: 1.8rem;
-  width: 70%;
-}
-.prices .adaptive-btn {
-  margin-top: 9rem ;
-}
-.scheme {
-  position: relative;
-}
-.scheme-header {
-  text-align: center;
-}
-.scheme-header h2 {
-  font-size: 3.4rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-  margin-bottom: 4rem;
-}
-.scheme-header p {
-  font-size: 1.8rem;
-}
-.scheme-block {
-  margin: 6rem auto;
-}
-.scheme-block-img {
-  height: 9rem;
-}
-.scheme-block h4 {
-  margin: 3rem auto;
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-size: 2.2rem;
-}
-.scheme-block p {
-  font-size: 1.4rem;
-  line-height: 1.6rem;
-}
-.scheme .hand {
-  position: absolute;
-  bottom: 0;
-  right: 0;
-}
-.all-inclusive .section-header h2 {
-  font-size: 4.8rem;
-  color: #358015;
-}
-.all-inclusive .section-header p {
-  font-size: 1.6rem;
-}
-.all-inclusive .media {
-  margin-bottom: 9rem;
-  font-size: 1.3rem;
-}
-.all-inclusive .media h4 {
-  margin-top: 1rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-size: 1.6rem;
-}
-.circle {
-  display: inline-block;
-  background-color: #358015;
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-}
-.circle-border {
-  margin-right: 1.8rem;
-  display: inline-block;
-  width: 5rem;
-  height: 5rem;
-  padding: 0.3rem;
-  border: 2px solid #358015;
-  border-radius: 50%;
-  text-align: center;
-  line-height: 4rem;
-  font-family: 'ProximaNova_bold', sans-serif;
+.about-features .orange {
   color: #fff;
-  font-size: 1.9rem;
+  background-color: #f6ae48;
 }
-.solving-problem {
-  position: relative;
-  padding-bottom: 14rem;
-}
-.solving-problem .section-header h2 {
-  font-size: 3.6rem;
-}
-.solving-problem .solving-problem-block h3 {
-  font-size: 2.1rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-}
-.solving-problem .solving-problem-block .problem-block {
+.creedo {
   padding: 5rem;
-  min-height: 42rem;
-  border: 4px solid #e8e8e8;
-}
-.solving-problem .solving-problem-block .solve-block {
-  padding: 5rem;
-  min-height: 42rem;
-  border: 4px solid #358015;
-}
-.solving-problem .solving-problem-block .li-block li {
-  margin: 4rem auto;
-  list-style: none;
-  font-size: 1.6rem;
-  line-height: 1.5rem;
-}
-.solving-problem .solving-problem-block .li-block li img {
-  margin-right: 2rem;
-}
-.solving-problem .worker {
-  position: absolute;
-  left: 40%;
-  bottom: 0;
-}
-.materials {
-  background-color: #f5f5f5;
-  text-align: center;
-  font-size: 1.9rem;
-}
-.materials a {
-  color: #49bf15;
-  text-decoration: #49bf15 underline;
-}
-.materials-header {
-  text-align: center;
-  margin-bottom: 7.7rem;
-}
-.materials-header h2 {
-  margin-bottom: 5rem;
-  font-size: 3.6rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-}
-.materials-block {
-  text-align: center;
-}
-.materials-block h3 {
-  margin-top: 1.3rem;
-  font-size: 2.2rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-}
-.materials-block span {
-  display: block;
-  height: 4rem;
-  font-size: 1.9rem;
-  margin: 2.5rem auto;
-}
-.materials-block a {
-  font-size: 1.6rem;
-  line-height: 1.8rem;
-}
-.materials-text {
-  font-size: 2rem;
-  margin-top: 6rem;
-}
-.work {
-  background: #fff url(/img/work.jpg) center right no-repeat;
-  background-position: -5rem 10rem;
-}
-.work .form-btn {
-  font-size: 1.4rem;
-}
-.services {
-  background: url(/img/services/bg-services.jpg) no-repeat center;
+  margin: 10rem auto;
+  min-height: 56vh;
+  background: url(/images/creedo-bg.png) center center no-repeat;
   background-size: cover;
-  text-align: center;
   color: #fff;
 }
-.services-header {
-  font-size: 1.9rem;
-}
-.services-header h2 {
-  margin-bottom: 4.9rem;
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-size: 3.6rem;
-}
-.services-header p {
-  margin-bottom: 7rem;
-}
-.services-block {
+.creedo-header h2 {
   margin-bottom: 5rem;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 2.5px;
 }
-.services-block h3 {
-  margin: 3rem auto;
-  font-family: 'ProximaNova_bold', sans-serif;
+.creedo-header p {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  letter-spacing: 1.2px;
 }
-.services-block .button {
-  height: 5rem;
-  width: 40%;
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-size: 1.6rem;
+.prices-block {
+  margin: 10rem auto;
+  padding: 3rem;
+  min-height: 35vh;
+  color: #fff;
 }
-.contacts {
-  background: url(/img/contacts-bg.png) center center no-repeat;
+.prices-block-header {
+  min-height: 6rem;
 }
-.contacts-content {
-  font-size: 1.8rem;
-}
-.contacts-content .maps {
-  width: 100%;
-  margin: 3rem auto;
-}
-.contacts-content h2 {
-  font-family: 'ProximaNova_bold', sans-serif;
-  font-size: 3.6rem;
-  margin-bottom: 6.9rem;
-}
-.contacts-content strong {
-  font-family: 'ProximaNova_bold', sans-serif;
-}
-.contacts-content a {
-  color: #292929;
-  text-decoration: underline;
-}
-.contacts-content span {
+.prices-block-header h2 {
+  font-size: 51px;
+  font-weight: 700;
+  line-height: 48.53px;
   text-transform: uppercase;
 }
-.footer {
-  text-align: center;
+.prices-block .line {
+  background-color: #ffffff;
+  opacity: 1;
 }
-.footer-text {
-  text-align: center;
-  font-size: 1.7rem;
+.prices-block .span-block {
+  margin-top: 3.5rem;
 }
-.footer-text strong {
-  font-size: 2rem;
-  font-family: 'ProximaNova_bold', sans-serif;
+.prices .landing {
+  background: url(/images/prices/1.png) center center no-repeat;
+  background-size: cover;
 }
-.footer-text a,
-.footer-text p {
-  color: #292929;
-  text-decoration: underline;
+.prices .landing .span-block span {
+  border-color: #00b9e7;
 }
-.popup {
-  display: none;
-  position: fixed;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
+.prices .web-site {
+  background: url(/images/prices/2.png) center center no-repeat;
+  background-size: cover;
+}
+.prices .web-site .span-block span {
+  border-color: #ffcb00;
+}
+.prices .mag {
+  background: url(/images/prices/3.png) center center no-repeat;
+  background-size: cover;
+}
+.header {
+  position: relative;
+  display: inline-block;
+}
+.header h2 {
   width: 100%;
-  height: 100%;
-  z-index: 9;
-  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0.19;
+  font-size: 80px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 3.6px;
 }
-.popup-content {
-  position: fixed;
-  left: 50%;
-  top: 10%;
-  background-color: #fff;
-  transform: translateX(-50%);
-  padding: 4rem 6rem ;
-}
-.popup-form {
-  margin-top: 3rem;
-  padding: 0;
-}
-.popup-close {
+.header h3 {
+  width: 100%;
   position: absolute;
-  top: -2.5rem;
-  right: -2rem;
-  width: 2rem;
-  text-align: center;
-  border: none;
-  background-color: transparent;
-  font-size: 5rem;
+  top: 0;
+  right: 0;
+  transform: translateY(-20%);
+  font-size: 2.6rem;
+  font-weight: 700;
+  letter-spacing: 1.8px;
+}
+.seo p {
+  float: right;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.2px;
+}
+.seo .yandex-logo {
+  margin-top: 2.4rem;
+}
+.projects {
+  background-color: #303263;
+}
+.projects-header {
+  padding: 2rem;
+  position: relative;
+  color: #ffffff;
+}
+.projects-header h2 {
+  opacity: 0.34;
+  font-size: 96px;
+  font-weight: 700;
+  line-height: 60.23px;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
+}
+.projects-header h3 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 36px;
+  font-weight: 1000;
+  line-height: 72px;
+  letter-spacing: 1.8px;
+}
+.adaptive {
+  position: relative;
+  margin-top: 15rem;
+}
+.adaptive p {
+  float: right;
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.2px;
+}
+.trade-in {
+  padding: 6rem 0;
+  background: url(/images/trade-in/trade-bg.png) center center no-repeat;
+  background-size: cover;
   color: #fff;
 }
-.popup-content {
-  text-align: center;
+.trade-in h2 {
+  margin-bottom: 5rem;
+  font-size: 3.8rem;
+  font-weight: 700;
+  line-height: 72px;
+  text-transform: uppercase;
+  letter-spacing: 2.4px;
 }
-.popup-header {
-  font-size: 1.8rem;
+.trade-in .wrap {
+  min-height: 6.5rem;
+}
+.trade-in .wrap h3 {
+  font-size: 30px;
+}
+.trade-in .wrap h3 img {
+  margin-right: 1rem;
+}
+.trade-in .wrap p {
+  margin-top: 2rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.individual {
+  padding: 10rem;
+}
+.individual p {
+  font-size: 1.7rem;
   font-weight: 400;
+  line-height: 48px;
+  letter-spacing: 1.2px;
 }
-.popup-header strong {
-  font-family: 'ProximaNova_bold', sans-serif;
+.contacts {
+  padding: 8rem;
+  background: url(/images/contacts-bg.png) center center no-repeat;
+  background-size: cover;
+  color: #fff;
 }
-@media (min-width: 992px) and (max-width: 1800px) {
-  .scheme .hand {
-    max-width: 50%;
-    min-height: 60%;
-  }
+.contacts-header h3 {
+  font-weight: 700;
 }
-@media (min-width: 1200px) and (max-width: 1600px) {
-  .solving-problem .worker {
-    left: 35%;
-  }
-  .work {
-    background-position: -30rem 10rem;
-  }
+.contacts-header p {
+  margin-top: 2rem;
+  font-size: 1.3rem;
+  line-height: 27px;
+  letter-spacing: 0.9px;
 }
-@media (max-width: 1199px) {
-  .prices-block-description {
-    height: 24rem;
-  }
-  .feedback .fotorama {
-    margin-bottom: 3rem;
-  }
-  .feedback-form {
-    padding: 2rem 4rem;
-  }
-  .work {
-    background-position: -50rem 10rem;
-  }
+.contacts-form {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border: 5px solid #fff;
+  /* Firefox 19+ */
+  /* Firefox 18- */
 }
-@media (min-width: 991px) and (max-width: 1299px) {
-  .feedback .hand {
-    max-width: 30rem;
-  }
-  .solving-problem .worker {
-    left: 32%;
-  }
+.contacts-form input,
+.contacts-form textarea {
+  width: 100%;
+  padding: 1rem;
+  margin: 0;
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  resize: none;
 }
-@media (min-width: 991px) {
-  .adaptive-btn .button {
-    display: none;
-  }
+.contacts-form textarea:focus {
+  color: #fff;
+  background: transparent;
 }
-@media (max-width: 991px) {
-  .main {
-    background-position: top right;
-  }
-  .main-content {
-    text-align: center;
-  }
-  .main-form {
-    margin-top: 3rem;
-  }
-  .main .small-text {
-    text-align: center;
-  }
-  .main .small-text small {
-    color: #fff;
-    font-size: 2rem;
-  }
-  .prices {
-    max-height: 1020rem;
-  }
-  .prices-header .button {
-    display: none;
-  }
-  .prices-block {
-    margin-bottom: 5rem;
-  }
-  .prices-block-img {
-    margin-left: 7rem;
-    max-width: 80%;
-  }
-  .prices-block-description {
-    max-height: 16rem;
-  }
-  .feedback {
-    text-align: center;
-  }
-  .feedback .hand {
-    display: none;
-  }
-  .scheme {
-    text-align: center;
-  }
-  .scheme .hand {
-    display: none;
-  }
-  .solving-problem .problem-block {
-    margin-bottom: 5rem;
-  }
-  .solving-problem .worker {
-    display: none;
-  }
-  .materials-block {
-    margin: 3rem auto;
-    border: 2px solid #358015;
-  }
-  .work {
-    background-size: cover;
-    background-position: top right;
-  }
-  .contacts {
-    text-align: center;
-  }
-  .footer-text {
-    margin-top: 4rem;
-  }
+.contacts-form textarea::-webkit-input-placeholder {
+  color: #fff;
+}
+.contacts-form ::-webkit-input-placeholder {
+  color: #fff;
+}
+.contacts-form ::-moz-placeholder {
+  color: #fff;
+}
+.contacts-form :-moz-placeholder {
+  color: #fff;
+}
+.contacts-form :-ms-input-placeholder {
+  color: #fff;
+}
+.contacts-form .name {
+  margin: 0;
+  display: inline-block;
+  width: 50%;
+  border-right: 5px solid #fff;
+}
+.contacts-form .fam {
+  margin: 0;
+  display: inline-block;
+  width: 48%;
+}
+.contacts-form .email {
+  border-top: 5px solid #fff;
+  border-bottom: 5px solid #fff;
+}
+.contacts-bottom {
+  margin-top: 1rem;
+}
+.contacts-bottom p {
+  display: inline-block;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
+.contacts-bottom .button {
+  float: right;
+  border-radius: 15px;
+  width: 40%;
+  background-color: #f6ae48;
+}
+footer {
+  height: 10vh;
+  background-color: #f6ae48;
 }
 @media (max-width: 767px) {
-  .header {
-    margin-bottom: 30rem;
-  }
-  .header .phone-block {
-    margin-top: 4rem;
+  .about-features-block {
     text-align: center;
   }
-  .header .button {
-    margin-top: 6.5rem;
-    width: 80%;
-    height: 60px;
-    font-family: 'ProximaNova_bold', sans-serif;
-    text-transform: uppercase;
-    font-size: 1.4rem;
-  }
-  .header .wrap-block {
+  .span-block {
     text-align: center;
   }
-  .main {
-    text-align: center;
-    background-position: top left;
+  .span-block span {
+    height: 4rem;
   }
-  .main-form {
-    margin-top: 5rem;
-  }
-  .main .small-text {
-    text-align: center;
-  }
-  .main .small-text small {
-    color: #292929;
-  }
-  .prices-block-img {
-    margin-left: 5rem;
-  }
-  .feedback {
-    text-align: center;
-  }
-  .feedback-prev-btn {
-    left: -1rem;
-  }
-  .feedback-next-btn {
-    right: -1rem;
-  }
-}
-@media (max-width: 575px) {
-  .main .header .button {
-    width: 80%;
-  }
-  .main .phone-block {
-    margin-top: 4rem;
-    text-align: center;
-  }
-  .main-content {
-    margin-top: 30rem;
+  .contacts {
+    padding: 0;
   }
 }
