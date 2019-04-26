@@ -1,9 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+}
 html {
   scroll-behavior: smooth;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
 }
 body {
   font-family: Arial;
   text-align: center;
+  overflow-x: hidden;
 }
 .button {
   width: 100%;
