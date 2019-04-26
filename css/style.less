@@ -1,0 +1,498 @@
+    @orange: #f6ae48;
+@projects-bg: #303263;
+
+
+html {
+    scroll-behavior: smooth;
+    }
+
+body {
+    font-family: Arial;
+    text-align: center;
+}
+
+.bold(){
+    font-family: 'Heebo', sans-serif;
+}
+.forp() {
+    font-family: 'PT Sans', sans-serif;
+}
+.button {
+    width: 100%;
+    height: 50px;
+    background-color: #6a6b8e;
+    color: #fff;
+    border: none;
+    border-radius: 8%;
+    font-weight: 700;
+}
+// Main strart //
+
+.main {
+    display: block;
+    padding: 9rem 0; 
+    width: 100%;
+    text-align: center;
+    background: url(/images/main-bg.png) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    &-header {
+        h1 {
+            .bold();
+            font-size: 2.8rem;
+            line-height: 6rem;
+            font-weight: 1000;
+        }
+        p {
+            .forp();
+            font-size: 2rem;
+            line-height: 3rem;
+        }
+    }
+    &-content {
+        margin-top: 3rem;
+        .wrap {
+            display: block;
+            padding: 1rem;
+            &-block {
+                position: relative;
+                text-align: center;
+                height: 180px;
+                padding: 2rem 1rem;
+                border: 4px solid #fff;
+                border-top: none;
+                &::before {
+                    top: 0;
+                    position: absolute;
+                    content: '';
+                    border: #fff 2px solid;
+                    right: 0;
+                    width: 40%;
+                }
+                &::after {
+                    top: 0;
+                    position: absolute;
+                    content: '';
+                    border: #fff 2px solid;
+                    left: 0;
+                    width: 40%;
+                }
+                h2 {
+                    letter-spacing: 2.4px;
+                    font-size: 3.8rem;
+                    font-weight: 1000;
+                }
+                p {
+                    letter-spacing: 0.9px;
+                    font-size: 1.2rem;
+                }
+            }
+            &-img {
+                display: inline-block;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+            }
+        }
+    }
+}
+
+//Main End // 
+
+// Nav settings Start //
+.navbar-nav {
+    .nav-item {
+        .nav-link {
+            font-size: 1.5rem;
+            font-weight: 700;   
+            color: #000000;
+            &:focus {
+                color: @orange;
+            }
+        } 
+    }
+}
+
+
+// Nav settings End //
+.line {
+    height: 2px;
+    background-color: #000000;
+    opacity: 0.32;
+}
+
+//Span block start //
+
+.span-block {
+    position: relative;
+    span {
+        float: left;
+        padding: 0 1rem;
+        border: 3px solid #fff;
+        font-size: 18px;
+        line-height: 48px;
+        letter-spacing: 0.9px;
+    }
+    img {
+        display: block;
+        position: absolute;
+        float: right;
+        top: 50%;
+        right: 0;
+        transform: translateY(50%);
+    }
+}
+
+//Span block End //
+
+//Section about start //
+
+.about {
+    margin-top: 8rem;
+    &-header {
+        .header-text {
+            h2 {
+                display: block;
+                margin: 2rem auto;
+                line-height: 3rem;
+                font-size: 3rem;
+            }
+        }
+
+    }
+    &-features {
+        margin-top: 15rem;
+        &-block {
+            min-height: 35rem;
+            padding: 1.5rem;
+            h3 {
+                margin: 1.5rem auto;
+            }
+        }
+        .orange {
+            color: #fff;
+            background-color: @orange;
+        }
+    }
+}
+
+// Section about end //
+
+//Section creedo start //
+
+.creedo {
+    padding: 5rem;
+    margin: 10rem auto;
+    min-height: 56vh;
+    background: url(/images/creedo-bg.png) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    &-header {
+        h2 {
+            margin-bottom: 5rem;
+            font-size: 50px;
+            font-weight: 700;
+            line-height: 48px;
+            letter-spacing: 2.5px;
+        }
+        p {
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 36px;
+            letter-spacing: 1.2px;
+        }
+    }
+}
+
+//Section creedo end //
+
+// Section prices start //
+
+.prices {
+    &-block {
+        margin: 10rem auto;
+        padding: 3rem;
+        min-height: 35vh;
+        color: #fff;
+        &-header {
+            min-height: 6rem;
+            h2 {
+                font-size: 51px;
+                font-weight: 700;
+                line-height: 48.53px;
+                text-transform: uppercase;
+            }
+        }
+        .line {
+            background-color: #ffffff;
+            opacity: 1;
+        }
+        .span-block {
+            margin-top: 3.5rem;
+        }
+    }
+    .landing {
+        background: url(/images/prices/1.png) center center no-repeat;
+        background-size: cover;
+        .span-block {
+            span {
+                border-color: #00b9e7;
+            }
+        }
+    }
+    .web-site {
+        background: url(/images/prices/2.png) center center no-repeat;
+        background-size: cover;
+        .span-block {
+            span {
+                border-color: #ffcb00;
+            }
+        }
+    }
+    .mag {
+        background: url(/images/prices/3.png) center center no-repeat;
+        background-size: cover;
+    }
+}
+
+// Section prices End //
+
+// Header model start // 
+
+.header {
+    position: relative;
+    display: inline-block;
+    h2 {
+        width: 100%;
+        opacity: 0.19;
+        font-size: 80px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 3.6px;
+    }
+    h3 {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-20%);
+        font-size: 2.6rem;
+        font-weight: 700;
+        letter-spacing: 1.8px;
+    }
+}
+
+// Header model End //
+
+//Section seo start //
+
+.seo {
+    p {
+        float: right;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 1.2px;
+    }
+    .yandex-logo {
+        margin-top: 2.4rem;
+    }
+}
+
+// Section seo end //
+
+//Section projects start //
+
+.projects {
+    background-color: @projects-bg;
+    &-header {
+        padding: 2rem;
+        position: relative;
+        color: #ffffff;
+        h2 {
+            opacity: 0.34;
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 60.23px;
+            text-transform: uppercase;
+            letter-spacing: 2.4px;
+        }
+        h3 {
+            position: absolute;
+            top: 20%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 36px;    
+            font-weight: 1000;
+            line-height: 72px;
+            letter-spacing: 1.8px;
+        }
+    }
+}
+
+//Section projects End //
+
+// Section Adaptive start //
+
+.adaptive {
+    position: relative;
+    margin-top: 15rem;
+    p {
+        float: right;
+        font-size: 2rem;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 1.2px;
+    }
+}
+
+// Section Adaptive End //
+
+//Section trade-in start //
+
+.trade-in {
+    padding: 6rem 0;
+    background:url(/images/trade-in/trade-bg.png) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    h2 {
+        margin-bottom: 5rem;
+        font-size: 3.8rem;
+        font-weight: 700;
+        line-height: 72px;
+        text-transform: uppercase;
+        letter-spacing: 2.4px;
+    }
+    .wrap {
+        min-height: 6.5rem;
+        h3 {
+            font-size: 30px;
+            img {
+                margin-right: 1rem;
+            }
+        }
+        p {
+            margin-top: 2rem;
+            font-size: 2rem;
+            font-weight: 700;
+        }
+    }
+}
+
+//Section trade-in End //
+
+// Section industrial Start //
+
+.individual {
+    padding: 10rem;
+    p {
+        font-size: 1.7rem;
+        font-weight: 400;
+        line-height: 48px;
+        letter-spacing: 1.2px;
+    }
+}
+
+// Section industrial Start //
+
+// Contacts section start//
+
+.contacts {
+    padding: 8rem;
+    background: url(/images/contacts-bg.png) center center no-repeat;
+    background-size: cover;
+    color: #fff;
+    &-header {
+        h3 {
+            font-weight: 700;
+        }
+        p {
+            margin-top: 2rem;
+            font-size: 1.3rem;
+            line-height: 27px;
+            letter-spacing: 0.9px;
+        }
+    }
+    &-form {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        border: 5px solid #fff;
+        input, textarea {
+            width: 100%;
+            padding: 1rem;
+            margin: 0;
+            text-decoration: none;
+            background:transparent;
+            color: #fff;
+            font-size: 1rem;
+            border: none;
+            resize:none;
+
+        }
+        textarea:focus {
+            color:#fff;
+            background: transparent;
+        }
+        textarea::-webkit-input-placeholder { color: #fff; }
+        ::-webkit-input-placeholder {color:#fff;}
+        ::-moz-placeholder          {color:#fff;}/* Firefox 19+ */
+        :-moz-placeholder           {color:#fff;}/* Firefox 18- */
+        :-ms-input-placeholder      {color:#fff;}
+        .name {
+            margin: 0;
+            display: inline-block;
+            width: 50%;
+            border-right: 5px solid #fff;
+        }
+        .fam {
+            margin: 0;
+            display: inline-block;
+            width: 48%;
+        }
+        .email {
+            border-top: 5px solid #fff;
+            border-bottom: 5px solid #fff;
+        }
+    }
+    &-bottom {
+        margin-top: 1rem;
+        p {
+            display: inline-block;
+            font-size: 0.8rem;
+            line-height: 1rem;
+        }
+        .button {
+            float: right;
+            border-radius: 15px; 
+            width: 40%;
+            background-color: @orange;
+        }
+    }
+}
+
+// Contacts section End//
+
+// Footer Start//
+
+footer {
+    height: 10vh;
+    background-color: @orange;
+}
+
+// Footer End//
+
+@media(max-width: 767px) {
+    .about-features-block {
+        text-align: center;
+    }
+    .span-block {
+        text-align: center;
+        span {
+            height: 4rem;
+        }
+    }
+    .contacts {
+        padding: 0;
+    }
+}
